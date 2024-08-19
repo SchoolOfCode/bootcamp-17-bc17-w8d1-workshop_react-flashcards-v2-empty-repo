@@ -22,7 +22,7 @@ export default function Flashcards() {
         <>
             <section className={styles.flashcards}>
 
-                <FlashCard
+                {/* <FlashCard
                     question={flashcardBank[0].question}
                     answer={flashcardBank[0].answer}
                 ></FlashCard>
@@ -35,7 +35,18 @@ export default function Flashcards() {
                 <FlashCard
                     question={flashcardBank[2].question}
                     answer={flashcardBank[2].answer}
-                ></FlashCard>
+                ></FlashCard> */}
+
+                {
+                    flashcardBank.map(item => {
+                        return (
+                        <FlashCard
+                            question={item.question}
+                            answer={item.answer}
+                        ></FlashCard>
+                    )})
+                }
+
 
             </section>
         </>
